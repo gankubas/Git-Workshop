@@ -70,7 +70,7 @@ std::ostream& operator<<(std::ostream& out, const Student& student)
 
 int main(void)
 {
-    Faculty acs("ACS", {Student(1, "John Doe", {7.0, 5.0, 9.9}), Student(2, "Jane doe", {4.5, 6.0, 1.0})});
+    Faculty acs("ACS", {Student("John Doe", {7.0, 5.0, 9.9}, 1), Student("Jane doe", {4.5, 6.0, 1.0}, 2)});
 
     acs.printPassingStudents();
     acs.printFailingStudents();
