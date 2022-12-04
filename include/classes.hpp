@@ -1,6 +1,40 @@
 #include "libs.hpp"
 
-// TODO move Student here
+class Student
+{
+    private:
+        int id;
+        std::string name;
+        std::vector<double> grades;
+        double average;
+
+    public:
+        Student(int id, std::string name, std::vector<double> grades);
+
+        int getId();
+        std::string getName();
+        std::vector<double> getGrades();
+        double getAverage();
+        
+        void calculateAverage(){
+        
+        	double s=0, k=0;
+        	
+        	for(double i : grades)
+        	{
+        		s=s+i;
+        		k++;
+        	}
+        	
+        	average = s/k;
+        	
+        	
+        };
+        bool hasFailed();
+
+        friend std::ostream& operator<<(std::ostream& out, const Student& student);
+};
+
 
 class University
 {

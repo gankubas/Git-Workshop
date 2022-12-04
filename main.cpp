@@ -1,26 +1,5 @@
 #include "include/classes.hpp"
 
-class Student
-{
-    private:
-        int id;
-        std::string name;
-        std::vector<double> grades;
-        double average;
-
-    public:
-        Student(int id, std::string name, std::vector<double> grades);
-
-        int getId();
-        std::string getName();
-        std::vector<double> getGrades();
-        double getAverage();
-        
-        void calculateAverage(); // TODO: implement this function
-        bool hasFailed();
-
-        friend std::ostream& operator<<(std::ostream& out, const Student& student);
-};
 
 Student::Student(int id, std::string name, std::vector<double> grades)
 {
