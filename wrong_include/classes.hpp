@@ -56,6 +56,18 @@ bool Student::hasFailed()
     return this->average > 5.0;
 }
 
+void Student::calculateAverage()
+{
+    double sum = 0;
+
+    for(double i : this->grades)
+    {
+        sum += i;
+    }
+
+    this->average = sum / this->grades.size();
+}
+
 std::ostream& operator<<(std::ostream& out, const Student& student)
 {
     out << "ID: " << student.id << "\n" << "Name: " << student.name << "\n" << "Grades: [ ";
